@@ -1,11 +1,11 @@
 # Challenge for "Learn Functional Programming In Python": Chapter 3 - Lesson 1
 
-# Goal: Debug 'our_bugged_function(...) and turn it into a pure function to solve the challenge
+# Goal: Debug 'scale_list(...) and turn it into a pure function to solve the challenge
 
 
 
 # This is the function we need to debug and turn into a PURE function
-def our_bugged_function(input_list, multiplier):
+def scale_list(input_list, multiplier):
     for i in range(len(input_list)):
         input_list[i] *= multiplier
     return input_list
@@ -30,7 +30,7 @@ def main():
 
     for i in range(4):
         multiplier = randint(2,10)
-        new_list = our_bugged_function(my_list, multiplier)
+        new_list = scale_list(my_list, multiplier)
         print("\n=============================")
         print(f"Test #{i+1}")
         print( f"Input Expected: {expected_list}")
