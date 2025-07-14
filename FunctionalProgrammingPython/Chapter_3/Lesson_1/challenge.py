@@ -1,4 +1,21 @@
+# Challenge for "Learn Functional Programming In Python": Chapter 3 - Lesson 1
 
+# Goal: Debug 'our_bugged_function(...) and turn it into a pure function to solve the challenge
+
+
+
+# This is the function we need to debug and turn into a PURE function
+def our_bugged_function(input_list, multiplier):
+    for i in range(len(input_list)):
+        input_list[i] *= multiplier
+    return input_list
+
+
+
+
+
+# === Do not touch code below! ================================================
+# =============================================================================
 from random import randint
 
 my_list = []
@@ -28,11 +45,6 @@ def main():
         else:
             print("Fail")
 
-def our_bugged_function(input_list, multiplier):
-    for i in range(len(input_list)):
-        input_list[i] *= multiplier
-    return input_list
-
 def test_function1():
     for i in range(len(my_list)):
         if expected_list[i] != my_list[i]:
@@ -44,11 +56,5 @@ def test_function2(test_list, multiplier):
         if test_list[i] != (expected_list[i])*multiplier:
             return False
     return True
-
-
-# Solution:
-def our_bugged_function(input_list, multiplier):
-	return list( map( lambda n: n*multiplier, input_list ) )
-
 
 main()
